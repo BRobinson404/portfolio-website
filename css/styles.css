@@ -1,0 +1,259 @@
+/*Color palette choices #145889 #397fe7 #535d72 */
+:root {
+  --primary-color: #145889;
+  --secondary-color: #397fe7;
+  --dark-grey: #535d72;
+  --sun-yellow:#edc655;
+  --sun-light-yellow:#fcffad;
+  --sun-red:#f76414;
+  --grid-fill:#d3d3d3;
+  --header-divider:#d4d4d4;
+  --main-background:#fffafa;
+  --primary-button-fill:#145889;
+  --primary-button-text:#fffafa;
+  --primary-button-border:#0000004d;
+  --visited-link:#401572;
+  --heading-font-weight:700;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--secondary-color);
+}
+
+a:visited {
+  color: var(--visited-link);
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+
+.page-header {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+  border-bottom: 2px solid var(--header-divider);
+}
+
+body {
+  background-color: var(--main-background);
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 12px;
+  margin: 12px;
+}
+
+h1 {
+    font-size: 30 px;
+    font-weight: var(--heading-font-weight);
+}
+
+h2 {
+    font-size: 24 px;
+    font-weight: var(--heading-font-weight);
+}
+
+h3{
+    font-size: 18 px;
+    font-weight: var(--heading-font-weight);
+}    
+
+  .button, button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: #145889;
+    color: var(--primary-button-text);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid var(--primary-button-border);
+    transition-duration: 0.9s;
+    transition-property: opacity;
+  }
+  
+  button:hover,
+  button:focus,
+  .button:hover,
+  .button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .about-me{
+    text-align: center;
+    margin: auto;
+  }
+
+  .about-me-list {
+    list-style-type: none;
+  }
+
+  .navigation-list {
+    list-style-type: none;
+    text-align: right;
+  }
+
+  .navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  
+  .grid__item {
+    background-color:var(--grid-fill);
+  }
+
+  .grid__item:last-child {
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .profile__portrait {
+    float: left;
+    width: 250px;
+    height: auto;
+    margin-right: 40px;
+    border-radius: 50%;
+  }
+
+  .profile {
+    min-width: 360px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media all and (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media all and (min-width: 500px) and (max-width: 750px){
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media all and (max-width: 750px) {
+    .grid {
+      grid-gap: 10px;
+    }
+    .grid__item:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+    h1 {
+      font-size: 22px;
+    }
+  }
+
+  @keyframes letter-shrink {
+    from {
+      transform: scale(1,1);
+    }
+    to {
+      transform: scale(0,0);
+    }
+  }
+
+ .letter_m {
+    animation: 2s letter-shrink ease-out;
+ }
+
+ button:hover,
+  button:focus,
+  .letter_m:hover,
+  .letter_m:focus {
+    cursor: pointer;
+    opacity: 0.0;
+  }
+
+ .letter_o {
+    animation: 3s letter-shrink ease-out;
+ }
+
+ button:hover,
+  button:focus,
+  .letter_o:hover,
+  .letter_o:focus {
+    cursor: pointer;
+    opacity: 0.0;
+  }
+
+ .letter_n {
+    animation: 4s letter-shrink ease-out;
+ }
+
+ button:hover,
+  button:focus,
+  .letter_n:hover,
+  .letter_n:focus {
+    cursor: pointer;
+    opacity: 0.0;
+  }
+
+ .letter_r {
+    animation: 5s letter-shrink ease-out;
+ }
+
+ button:hover,
+  button:focus,
+  .letter_r:hover,
+  .letter_r:focus {
+    cursor: pointer;
+    opacity: 0.0;
+  }
+
+ .letter_o_2 {
+    animation: 6s letter-shrink ease-out;
+ }
+
+ button:hover,
+  button:focus,
+  .letter_o_2:hover,
+  .letter_o_2:focus {
+    cursor: pointer;
+    opacity: 0.0;
+  }
+
+ .letter_e {
+    animation: 7s letter-shrink ease-out;
+ }
+
+ button:hover,
+  button:focus,
+  .letter_e:hover,
+  .letter_e:focus {
+    cursor: pointer;
+    opacity: 0.0;
+  }
+ 
