@@ -5,17 +5,19 @@
 * Browsers: last 4 version
 */
 
+/*Color palette choices #145889 #397fe7 #535d72 */
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 a {
-  color: undefined;
+  color: #397fe7;
 }
 
 a:visited {
-  color: undefined;
+  color: #6623b3;
 }
 
 a:hover, a:focus {
@@ -43,11 +45,11 @@ a:hover, a:focus {
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: right;
-  border-bottom: undefined;
+  border-bottom: 2px solid #d4d4d4;
 }
 
 body {
-  background-color: undefined;
+  background-color: #fffafa;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -71,34 +73,16 @@ h3{
     font-weight: undefined;
 }    
 
-  .button {
+  .button, button {
     border: none;
     display: inline-block;
     font-family: inherit;
     background-color: #145889;
-    color: undefined;
+    color: #fffafa;
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
-    border-bottom: undefined;
-    -webkit-transition-duration: 0.9s;
-         -o-transition-duration: 0.9s;
-            transition-duration: 0.9s;
-    -webkit-transition-property: opacity;
-    -o-transition-property: opacity;
-    transition-property: opacity;
-  }    
-
-  button {
-    border: none;
-    display: inline-block;
-    font-family: inherit;
-    background-color: #145889;
-    color: undefined;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    border-bottom: undefined;
+    border-bottom: 2px solid #0000004d;
     -webkit-transition-duration: 0.9s;
          -o-transition-duration: 0.9s;
             transition-duration: 0.9s;
@@ -143,7 +127,7 @@ h3{
   }
   
   .grid__item {
-    background-color:undefined;
+    background-color:#535d72;
   }
 
   .grid__item:last-child {
