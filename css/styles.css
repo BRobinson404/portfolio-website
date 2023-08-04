@@ -2,11 +2,8 @@
   --primary-color: #145889;
   --secondary-color: #397fe7;
   --dark-grey: #535d72;
+  --black:var(--black)
   --heading-font-weight: 700;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 a {
@@ -17,7 +14,8 @@ a:visited {
   color: #6623b3;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
@@ -64,18 +62,23 @@ h3 {
 
 h1 {
   font-size: 1.875rem;
+  color: var(--primary-color);
 }
 
 h2 {
   font-size: 1.5rem;
+  color: var(--black);
 }
 
 h3 {
   font-size: 1.125rem;
 }
 
-.coding-experience-table {
-  justify-items: center;
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height as needed */
 }
 
 #background_image {
@@ -83,17 +86,12 @@ h3 {
   margin: auto;
 }
 
-#g15 {
-  height: auto;
-  width: auto;
-  margin: auto;
-}
-
-.button, button {
+.button,
+button {
   border: none;
   display: inline-block;
   font-family: inherit;
-  background-color: #145889;
+  background-color: var(--primary-color);
   color: #fffafa;
   text-decoration: none;
   padding: 10px;
@@ -101,6 +99,7 @@ h3 {
   border-bottom: 2px solid #0000004d;
   transition-duration: 0.9s;
   transition-property: opacity;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 button:hover,
@@ -138,7 +137,10 @@ button:focus,
 }
 
 .grid__item {
-  background-color: #535d72;
+  background-color: #b8cfff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .grid__item:last-child {
@@ -167,37 +169,41 @@ button:focus,
   text-align: center;
 }
 
-  @media all and (max-width: 500px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
+/* Media Queries */
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
-  @media all and (min-width: 500px) and (max-width: 750px){
-    .grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  @media all and (max-width: 750px) {
-    .grid {
-      grid-gap: 10px;
-    }
-    .grid__item:last-child {
-      grid-column: auto / auto;
-      grid-row: auto / auto;
-    }
-    h1 {
-      font-size: 22px;
-    }
-  }
+}
 
-  @keyframes letter-shrink {
-    from {
-      transform: scale(1,1);
-    }
-    to {
-      transform: scale(0,0);
-    }
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
   }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@keyframes letter-shrink {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(0, 0);
+  }
+}
+
 /* Consolidated animation styles for letters */
 .letter {
   animation-timing-function: ease-out;
@@ -205,7 +211,7 @@ button:focus,
   opacity: 0.0;
   height: auto;
   width: auto;
-  margin: auto
+  margin: auto;
 }
 
 /* Example usage of consolidated animation styles */
@@ -245,59 +251,34 @@ button:focus,
   margin: auto;
 }
 
- button:hover,
-  button:focus,
-  .letter_m:hover,
-  .letter_m:focus {
-    cursor: pointer;
-    opacity: 0.0;
-  }
+.button:hover,
+.button:focus,
+.letter_m:hover,
+.letter_m:focus,
+.button:hover,
+.button:focus,
+.letter_o:hover,
+.letter_o:focus,
+.button:hover,
+.button:focus,
+.letter_n:hover,
+.letter_n:focus,
+.button:hover,
+.button:focus,
+.letter_r:hover,
+.letter_r:focus,
+.button:hover,
+.button:focus,
+.letter_o_2:hover,
+.letter_o_2:focus,
+.button:hover,
+.button:focus,
+.letter_e:hover,
+.letter_e:focus {
+  cursor: pointer;
+  opacity: 0.0;
+}
 
-
- button:hover,
-  button:focus,
-  .letter_o:hover,
-  .letter_o:focus {
-    cursor: pointer;
-    opacity: 0.0;
-  }
-
- 
-
- button:hover,
-  button:focus,
-  .letter_n:hover,
-  .letter_n:focus {
-    cursor: pointer;
-    opacity: 0.0;
-  }
-
- 
-
- button:hover,
-  button:focus,
-  .letter_r:hover,
-  .letter_r:focus {
-    cursor: pointer;
-    opacity: 0.0;
-  }
-
- 
-
- button:hover,
-  button:focus,
-  .letter_o_2:hover,
-  .letter_o_2:focus {
-    cursor: pointer;
-    opacity: 0.0;
-  }
-
- 
- button:hover,
-  button:focus,
-  .letter_e:hover,
-  .letter_e:focus {
-    cursor: pointer;
-    opacity: 0.0;
-  }
- 
+.svg-container {
+  display: block;
+}
