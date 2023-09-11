@@ -24,7 +24,7 @@ Welcome to my portfolio page! This is where you can learn more about me, my skil
 
 ## Getting Started
 
-1. View my live portfolio [here][([https://your-live-portfolio-link.com](https://brobinson404.github.io/portfolio-website/))](https://brobinson404.github.io/portfolio-website/).
+1. View my live portfolio https://brobinson404.github.io/portfolio-website/
    -or-
 2. Clone this repository to your local machine and open the HTML files in your web browser.
 
