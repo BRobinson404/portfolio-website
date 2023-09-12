@@ -2,7 +2,7 @@
   --primary-color: #145889;
   --secondary-color: #397fe7;
   --dark-grey: #535d72;
-  --black:var(--black)
+  --black: var(--black);
   --heading-font-weight: 700;
 }
 
@@ -79,6 +79,7 @@ h3 {
   margin: 0 auto;
   padding: 20px;
 }
+
 /* Add a new class for the table container */
 .table-container {
   display: flex;
@@ -91,9 +92,9 @@ h3 {
 /* Style the table */
 .coding-experience-table {
   width: 100%;
-  max-width: 800px; 
+  max-width: 800px;
   border-collapse: collapse;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .coding-experience-table th,
@@ -112,14 +113,15 @@ h3 {
   background-color: #f5f5f5; /* Alternate row background color */
 }
 
-
 #background_image {
   height: auto;
   margin: auto;
 }
 
+/* Apply the button styles to all buttons except the animated letters buttons */
 .button,
-button {
+button,
+.contact-button {
   border: none;
   display: inline-block;
   font-family: inherit;
@@ -129,27 +131,44 @@ button {
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid #0000004d;
-  transition-duration: 0.9s;
+  transition-duration: 0.3s;
   transition-property: opacity;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Apply hover and focus styles to all buttons except the animated letters buttons */
 button:hover,
 button:focus,
 .button:hover,
-.button:focus {
+.button:focus,
+.contact-button:hover,
+.contact-button:focus {
   cursor: pointer;
   opacity: 0.8;
 }
 
 .about-me {
   text-align: center;
-  margin: 40px 0;
+  padding: 20px;
+}
+
+.about-me h1 {
+  font-size: 24px;
+}
+
+.about-me p {
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .about-me-list {
   list-style-type: none;
-  text-align: center;
+  padding-left: 20px;
+}
+
+.about-me-list li {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .navigation-list {
@@ -194,11 +213,47 @@ button:focus,
   margin: 0 auto;
 }
 
-.page-footer {
-  clear: both;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+/* Adjust the layout for screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+  .profile {
+    width: 50%; /* Make the profile take full width in mobile view */
+  }
+
+  .profile__portrait {
+    float: none; /* Remove float for mobile view */
+    width: 100%; /* Make the image take full width in mobile view */
+    height: auto; /* Auto height for responsive image */
+    margin-right: 0; /* Remove margin-right for mobile view */
+  }
+
+  .profile_header {
+    margin-top: 20px; /* Add some spacing between the image and the header in mobile view */
+  }
+
+  .page-footer {
+    text-align: center; /* Center-align the footer in mobile view */
+  }
+}
+
+/* Additional adjustments for screens with a maximum width of 414px */
+@media (max-width: 414px) {
+  .profile__portrait {
+    display: flex;
+    align-self: auto;
+    width: 40%; /* Reduce the width of the image */
+    height: auto; /* Auto height for responsive image */
+    margin: 0 auto; /* Center-align the image horizontally */
+    margin-top: 10px; /* Adjust the top margin for spacing */
+    float: none; /* Remove float for mobile view */
+  }
+
+  .profile_header {
+    text-align: center; /* Center-align the header text */
+  }
+
+  .profile_text {
+    text-align: center; /* Center-align the profile text */
+  }
 }
 
 /* Media Queries */
@@ -283,28 +338,19 @@ button:focus,
   margin: auto;
 }
 
+/* Apply hover and focus styles to the animated letters buttons */
 .button:hover,
 .button:focus,
 .letter_m:hover,
 .letter_m:focus,
-.button:hover,
-.button:focus,
 .letter_o:hover,
 .letter_o:focus,
-.button:hover,
-.button:focus,
 .letter_n:hover,
 .letter_n:focus,
-.button:hover,
-.button:focus,
 .letter_r:hover,
 .letter_r:focus,
-.button:hover,
-.button:focus,
 .letter_o_2:hover,
 .letter_o_2:focus,
-.button:hover,
-.button:focus,
 .letter_e:hover,
 .letter_e:focus {
   cursor: pointer;
@@ -316,6 +362,7 @@ button:focus,
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+  min-width: 100%;
 }
 
 /* Add CSS for the Contact page */
@@ -331,10 +378,6 @@ button:focus,
   margin-top: 20px;
 }
 
-.info-item {
-  margin-bottom: 10px;
-}
-
 .contact-button {
   display: inline-block;
   margin: 20px;
@@ -348,6 +391,10 @@ button:focus,
 
 .contact-button:hover {
   background-color: #397fe7;
+}
+
+.info-item {
+  margin-bottom: 10px;
 }
 
 .contact-form {
@@ -375,8 +422,10 @@ textarea {
   border-radius: 5px;
 }
 
+.download-button,
 input[type="submit"] {
   background-color: #145889;
+  text-decoration: none;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -385,6 +434,11 @@ input[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
+#download-link {
+  color: #fff; /* Set the text color to white for the specific anchor with ID */
+}
+.download-button:hover,
 input[type="submit"]:hover {
   background-color: #397fe7;
+  opacity: 1;
 }
