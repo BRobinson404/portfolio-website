@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Case Study: myFlix Full-Stack Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #145889;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #535d72;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .image-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            background-color: #397fe7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Case Study: myFlix Full-Stack Project</h1>
+
+    <ul>
+        <li><a href="https://github.com/BRobinson404/MyFlix">See the API on GitHub</a></li>
+        <li><a href="https://github.com/BRobinson404/MyFlix-client">See Client side on GitHub</a></li>
+        <li><a href="https://myflix404.netlify.app/login">MyFlix App - Live Link</a></li>
+    </ul>
+
+    <div class="image-container">
+        <img src="img/login-view.png" onclick="openModal('img/login-view.png')">
+        <img src="img\main-view.png" onclick="openModal('img/main-view.png')">
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <h2>Overview</h2>
+    <p>myFlix is a comprehensive web application built on the MERN (MongoDB, Express, React, Node.js) stack, designed to offer users a seamless experience in accessing extensive movie-related information. It allows users to register accounts, manage personal details, and curate a personalized list of favorite movies.</p>
+
+    <div class="image-container">
+        <img src="img\main-view.png" onclick="openModal('img/main-view.png')">
+        <img src="img\movie-view.png" onclick="openModal('img/movie-view.png')">
+    </div>
+
+    <h2>Purpose</h2>
+    <p>myFlix was a project I independently developed during my web development course at CareerFoundry, intended to showcase my proficiency in full-stack JavaScript development.</p>
+
+    <h2>Objective</h2>
+    <p>The goal of the project was to create a comprehensive full-stack application that could serve as a valuable addition to my professional portfolio. My primary objective was to construct both the server-side and client-side of the application entirely from the ground up.</p>
+
+    <div class="image-container">
+        <img src="img\signup-view.png" onclick="openModal('img/signup-view.png')">
+        <img src="img\genre-filter.png" onclick="openModal('img/genre-filter.png')">
+    </div>
+
+    <h2>Approach</h2>
+
+    <h3>Server-Side</h3>
+    <p>I developed a RESTful API with Node.js and Express, which communicates with a non-relational MongoDB database. The API is accessible through standard HTTP methods such as GET or POST. It utilizes CRUD methods to retrieve and store data in the database, enabling the provision of movie information in JSON format.</p>
+
+    <div class="image-container">
+        <img src="img\postman-screen1.png" onclick="openModal('img/postman-screen1.png')">
+        <img src="img\postman-screen2.png" onclick="openModal('img/postman-screen2.png')">
+    </div>
+
+    <h3>Client-Side</h3>
+    <p>After completing the API, I started to build the interface users would need when making requests to, and receiving responses from, the server-side. It is a single-page, responsive application, developed with React and React-Redux. It provides several interface views, including, but not limited to, a main view (shows a list of all movies), single movie view (shows data about a single movie and allows users to add the movie to their list of favorites), a login view, a registration view, and a profile view (where users can update their user data and list of favorites).</p>
+
+    <div class="image-container">
+        <img src="img\movie-view.png" onclick="openModal('img/movie-view.png')">
+        <img src="img\profile-view.png" onclick="openModal('img/profile-view.png')">
+    </div>
+
+    <h2>Challenges</h2>
+    <p>Challenge: Complex API Integration: Integrating the RESTful API with the client-side application posed several technical challenges, including data synchronization issues and API endpoint complications.</p>
+    <p>Solution: To address these issues, I conducted extensive testing and debugging to identify the root causes of the integration problems. Implementing appropriate error handling mechanisms and thoroughly reviewing the API documentation helped streamline the integration process and ensure the seamless communication between the client-side and server-side components</p>
+
+    <h2>Duration</h2>
+    <p>Throughout the duration of the project, I invested approximately 2 months to complete myFlix. The first month was dedicated to learning server-side programming and exploring the intricacies of Node.js. During this time, I also delved into building the API, ensuring its robustness and reliability. The second month revolved around mastering client-side programming and delving into the intricacies of React. Employing a Node.js client-side approach, I successfully finalized the project, culminating in a comprehensive full-stack web application that seamlessly integrates server and client functionalities.</p>
+
+    <h2>Credits</h2>
+    <p>Role: <span class="role">Front &amp; Back End Developer -Blake Robinson</span></p>
+    <p>Tutor: <span class="tutor">Utkarsha Baakshi</span></p>
+    <p>Mentor: <span class="mentor">Enrique Gonzales</span></p>
+
+    <script>
+        function openModal(imgPath) {
+            var modal = document.getElementById('myModal');
+            var modalImg = document.getElementById('modalImg');
+            modal.style.display = 'block';
+            modalImg.src = imgPath;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
